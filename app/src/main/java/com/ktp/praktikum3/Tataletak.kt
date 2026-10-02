@@ -99,6 +99,17 @@ fun TataletakBoxColumnRow(modifier: Modifier){
                 .height(height = 110.dp)
                 .background(color = color.Yellow),
             contenAllingment = Alignment.Center
-        )
+        ) {
+            column() {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "Col1_Row1_Komponen1")
+                    Text(text = "Col1_Row1_Komponen2")
+                    Text(text = "Col1_Row1_Komponen3")
+                }
+            }
+        }
     }
 }
