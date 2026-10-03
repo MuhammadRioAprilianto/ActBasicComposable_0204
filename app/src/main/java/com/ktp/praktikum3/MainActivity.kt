@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Praktikum3Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TataletakBoxColumnRow(
+                    LandingPage(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
