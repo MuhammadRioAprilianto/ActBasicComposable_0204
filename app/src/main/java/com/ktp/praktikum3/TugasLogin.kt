@@ -3,6 +3,7 @@ package com.ktp.praktikum3
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -19,11 +20,11 @@ import androidx.compose.ui.unit.dp
 fun LandingPage(modifier : Modifier = Modifier) {
     Column{
         //Bagian TOP
-        Column(modifier = modifier
+        Row(modifier = modifier
             .fillMaxWidth()
             .height(125.dp)
             .padding(5.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Box(modifier = Modifier
                 .height(120.dp)
@@ -34,14 +35,15 @@ fun LandingPage(modifier : Modifier = Modifier) {
             ) {
 
             }
-        }
-        Column(modifier = modifier
-            .fillMaxWidth()
-            .height(125.dp)
-            .padding(5.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            
+            Box(modifier = Modifier
+                .height(120.dp)
+                .width(300.dp)
+                .clip(shape = RoundedCornerShape(25.dp))
+                .background(color =Color.Blue),
+                contentAlignment = Alignment.Center
+            ) {
+
+            }
         }
     }
 }
