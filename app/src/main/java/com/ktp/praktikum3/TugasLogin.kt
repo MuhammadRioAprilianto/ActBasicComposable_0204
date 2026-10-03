@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun LandingPage(modifier: Modifier = Modifier) {
+fun LandingPage(modifier : Modifier = Modifier) {
     Column{
         //Bagian TOP
         Column(modifier = modifier
@@ -31,7 +31,17 @@ fun LandingPage(modifier: Modifier = Modifier) {
                 .clip(shape = RoundedCornerShape(25.dp))
                 .background(color =Color.Blue),
                 contentAlignment = Alignment.Center
-            ) {}
+            ) {
+
+            }
+        }
+        Column(modifier = modifier
+            .fillMaxWidth()
+            .height(125.dp)
+            .padding(5.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            
         }
     }
 }
