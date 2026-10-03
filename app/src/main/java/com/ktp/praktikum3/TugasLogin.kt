@@ -10,12 +10,16 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun LandingPage(modifier : Modifier = Modifier) {
@@ -29,12 +33,23 @@ fun LandingPage(modifier : Modifier = Modifier) {
         ) {
             Box(modifier = Modifier
                 .height(120.dp)
-                .width(200.dp)
-                .clip(shape = RoundedCornerShape(25.dp))
-                .background(color =Color.Blue),
+                .width(200.dp),
                 contentAlignment = Alignment.Center
             ) {
-
+                Column{
+                    Text(text = "Hallo,",
+                        fontSize = 40.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontFamily = FontFamily.Default,
+                        color = Color.Blue,
+                    )
+                    Text(text = "welcome",
+                        fontSize = 40.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontFamily = FontFamily.Default,
+                        color = Color.Blue
+                    )
+                }
             }
             Spacer(modifier = Modifier.width(10.dp))
             Box(modifier = Modifier
