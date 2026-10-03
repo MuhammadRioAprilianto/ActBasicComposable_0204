@@ -24,12 +24,12 @@ fun LandingPage(modifier : Modifier = Modifier) {
         Row(modifier = modifier
             .fillMaxWidth()
             .height(125.dp)
-            .padding(5.dp),
+            .padding(10.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(modifier = Modifier
                 .height(120.dp)
-                .width(120.dp)
+                .width(200.dp)
                 .clip(shape = RoundedCornerShape(25.dp))
                 .background(color =Color.Blue),
                 contentAlignment = Alignment.Center
@@ -39,7 +39,7 @@ fun LandingPage(modifier : Modifier = Modifier) {
             Spacer(modifier = Modifier.width(10.dp))
             Box(modifier = Modifier
                 .height(120.dp)
-                .width(300.dp)
+                .width(120.dp)
                 .clip(shape = RoundedCornerShape(25.dp))
                 .background(color =Color.Blue),
                 contentAlignment = Alignment.Center
