@@ -74,7 +74,7 @@ fun LandingPage(modifier : Modifier = Modifier) {
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .size(110.dp)
+                        .size(108.dp)
                         .clip(CircleShape)
                         .border(
                             width = 3.dp,
