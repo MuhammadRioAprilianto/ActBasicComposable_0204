@@ -47,14 +47,14 @@ fun LandingPage(modifier : Modifier = Modifier) {
 
             }
         }
-    }
-    Box(modifier = Modifier
-        .fillMaxWidth()
-        .height(400.dp)
-        .clip(shape = RoundedCornerShape(topStart = 25.dp, topEnd = 25.dp))
-        .background(color = Color.Blue),
-        contentAlignment = Alignment.BottomCenter
-    ) {
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .weight(1f)
+            .clip(shape = RoundedCornerShape(topStart = 25.dp, topEnd = 25.dp))
+            .background(color = Color.Blue),
+            contentAlignment = Alignment.BottomCenter
+        ) {
 
+        }
     }
 }
