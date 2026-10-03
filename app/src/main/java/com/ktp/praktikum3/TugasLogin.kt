@@ -1,6 +1,8 @@
 package com.ktp.praktikum3
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -8,7 +10,9 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,6 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -23,6 +29,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun LandingPage(modifier : Modifier = Modifier) {
+    val logo = painterResource(id = R.drawable.logo)
     Column{
         //Bagian TOP
         Row(modifier = modifier
@@ -55,11 +62,20 @@ fun LandingPage(modifier : Modifier = Modifier) {
             Box(modifier = Modifier
                 .height(120.dp)
                 .width(120.dp)
-                .clip(shape = RoundedCornerShape(25.dp))
-                .background(color =Color.Blue),
+                .clip(shape = RoundedCornerShape(25.dp)),
                 contentAlignment = Alignment.Center
             ) {
-
+                Image(painter = logo,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(110.dp)
+                        .clip(CircleShape)
+                        .border(
+                            width = 3.dp,
+                            color = Color.Blue,
+                            shape = CircleShape)
+                )
             }
         }
         Box(modifier = Modifier
