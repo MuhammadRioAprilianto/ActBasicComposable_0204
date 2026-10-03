@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -35,6 +36,7 @@ fun LandingPage(modifier : Modifier = Modifier) {
             ) {
 
             }
+            Spacer(modifier = Modifier.width(10.dp))
             Box(modifier = Modifier
                 .height(120.dp)
                 .width(300.dp)
@@ -45,5 +47,14 @@ fun LandingPage(modifier : Modifier = Modifier) {
 
             }
         }
+    }
+    Box(modifier = Modifier
+        .fillMaxWidth()
+        .height(400.dp)
+        .clip(shape = RoundedCornerShape(topStart = 25.dp, topEnd = 25.dp))
+        .background(color = Color.Blue),
+        contentAlignment = Alignment.BottomCenter
+    ) {
+
     }
 }
